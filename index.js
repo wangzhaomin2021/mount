@@ -26,6 +26,8 @@ module.exports = mount
 
 function mount (prefix, app) {
   if (typeof prefix !== 'string') {
+    // case 1. prefix string 挂载路径  app 挂载的应用 或 中间件
+    // case 2. prefix !string prefix 当作app, 挂载路径 为 /
     app = prefix
     prefix = '/'
   }
